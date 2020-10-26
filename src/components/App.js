@@ -29,7 +29,6 @@ class App extends React.Component {
   constructor() {
     super();
     api.get('/').then((res) => {
-      console.log('this is rendering now', res.data);
       this.setState({ draws: res.data.draws });
     });
   }
@@ -40,13 +39,11 @@ class App extends React.Component {
 
   onTermSubmit = (term) => {
     api.get('/').then((res) => {
-      console.log('fetch it', res.data.draws);
       res.data.draws.map((draw) => {
         if (term == draw.drawNumber) {
           this.setState({ selectedDraw: draw });
         }
       });
-      console.log(term);
     });
   };
 
