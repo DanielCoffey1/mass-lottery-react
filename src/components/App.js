@@ -8,7 +8,7 @@ import './App.css';
 const date = new Date();
 
 const api = axios.create({
-  baseURL: `https://www.masslottery.com/rest/keno/getDrawsByDateRange?startDate=2020-10-25&endDate=${date.toISOString().substr(0, 10)}`,
+  baseURL: `https://www.masslottery.com/rest/keno/getDrawsByDateRange?startDate=2020-10-24&endDate=${date.toISOString().substr(0, 10)}`,
 });
 
 class App extends React.Component {
